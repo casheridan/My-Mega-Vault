@@ -21,4 +21,4 @@ To generate a new token for a new domain you must first copy and import the doma
 	* Make sure you have your domain selected in the top right*
 4. Click "Start Run"
 5. Check in the variables of the environment and see if the oauth_token and oauth_token_secret were generated
-6. If they are continue to testing
+6. If they are continue to testing [[Domain Testing in Postman]]
