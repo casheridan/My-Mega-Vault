@@ -11,8 +11,6 @@ Ideas like liberalism
 #### Financial Crisis
 The French has exsausted some resources to help America with their revolution (this was based on revenge for the war between Britain and France before the American Revolution). Although they didn't use up a lot of resources.
 
-
-
 ### Phases of the Revolution
 ---
 - Constitutional: Reform of the Monarchy, Reform of France 1789 -> 1792
@@ -72,3 +70,85 @@ The King orders all of his delegates and nobles to join the National Assembly.
 ---
 #### National Assembly Meetings
 As The National Assembly meets to discuss a wide range of reforms. With the fear of counter-revolution the sans-culottes stormed and took over the **Bastile** so they can get some arms and have access to *some* jail cells. There is a huge fear called "The Great Fear" of counter revolution and invasion, this lead to forming of militias and attacks on manor houses in August. "The October Days": market women of Paris march to Versailles (action with bread prices/King is resistant, force King to march back with them to Paris) , break in, march the King back to Paris. The results of all this is The Bastille going to the National Assembly and The Great Fear causes the elimination of hereditary privileges.
+
+#### The New Body Politic
+---
+- Declaration of the Rights of Man (finished 1791)
+	- Rights, Freedoms (speech, religion, press)
+- Who is considered a citizen? (Active and passive citizenship)
+- Who is a man? (Colonial slavery, rights of women 	\[Olympe de Gouge])
+
+#### The Church in the State
+- Confiscation of Church Lands, *assignats*
+	- *assignat* confidence drops, the French pound, complicates economy and drives value of assignat down
+- **Civil Constitution of the Clergy**, 1790
+	- Clergy must swear allegiance to the state, are employed by the sate
+	- Pope threatens excommunications, inspiring revolt
+
+#### Radical Revolution
+- Popular Politics
+	- People drawn in by pamphlets, newspapers, political clubs
+		- These people are furious about inflation, questioning leadership, debate provisions of constitution
+- The King tries to flee France (June 1791): returns as a prisoner
+	- Fleeing to go get support of other Monarchs
+	- Queen is Mary Antionett, princess of Austria and is traveling with the king
+	- Fun fact, there was a mass destruction of busts of the king after he was captured and imprisioned.
+- **International polarization and war**
+	- French exiles plot/denounce; Austria and Prussia talk of intervention of behalf of "sovereigns" of Europe
+	- National Assembly sees war as a unifying factor that would spread the revolution
+- **National Assembly declares war April 1792**, Prussia and Austria invade and push towards Paris; in August crowds attack the royal palace and imprison the King
+
+#### Jacobinism and Crisis
+- Jacobins lead in the National Convention, from elections of September 1792 (stridently egalitarian)
+- Panic from invation sparks the "September Massacres" against "enemies of the revolution" (1000 dead in Paris)
+- National Convention delares France a Republic, tries and executes King Luis XVI (December / January); promulgates radical egalitarian policies (land, privileges, primogeniture, slavery, price fixing, calendar and festivals, sans-culotte vigilantism)
+- NC Reorganizes army with success, pushes the coalition out of France (now Spain, England, Holland)
+
+#### The Terror
+- **Committee of Public Saftey** (12)
+	- emergency powers "to make terror the order of the day" (1793) - a brad campaign to control the Revolution and eliminate threats to the Republic
+	- Centralization, dictatorship, and war provoke revolt: June 1792 purge of Convention; brutal suppression in Lyon, Bordeaux, Marseilles, and the Vendée
+	- Mass incarceration, mass execution, extra-judicial killings, sut down popular movements
+	- The Committee exhausts itself: by July 1794 self-sacrifice and terror no longer seem justified: Robespierre sent to guillotine
+
+### The Directory
+---
+- Violence between royalists and radicals, inflation, uprisings
+- 1795 Constitution
+	- limited suffrage, electors choose legislators, the Directory (5)
+- Faced with monarchist groundswell, the Directory (Sieyes) turns to Napoleon Bonaparte, a popular general; coup d'état makes him "temporary consul" with a Council of State 1799
+
+#### Napoleon
+- Owes his career to revolution
+- Rules using "the plebiscite" - uses it to become Consul for life
+- Reorganizes the state
+- Creates a modern state
+	- abolition of privilege
+	- fair and efficient taxation
+	- stops inflation
+	- relies on stats and reporting
+	- introduces Napolionic Code
+		- Uniform law
+		- Confirms patriarchy
+	- criminal law is egalitarian but deliberately brutal
+	- extensive reoganization of education
+- brings radicals (republicans and loyalists) into his government
+	- Concordat of 1801 with the pope
+- Invincible military (very loyal, well supplied, well led, pariotic citizen army)
+- Wins peace with:
+	- Austria (1801)
+	- Britain (1802)
+- Defeats (1805)
+	- Britain
+	- Russia
+	- Prussia
+	- Austira
+	- Sweden
+- Crowns himself emperor (1804)
+
+### Napolionic Empire
+---
+- Napolion gets his empire from military success
+- France builds affiliated states
+	- "gift of independence" proxy rules, sister republics, French garrisons
+	- export the Napoleonic government [ref. Napoleon]
