@@ -34,5 +34,3 @@ CONCEPT: allergies
 Say no to any y/n combinations, put 0, enter for anything not known or needed
 
 You can also search the GitHub org for the Request #, find a .csi (crime scene investigation), and check what is going to appear when an apptest is run for that Request #.
-
-

@@ -13,3 +13,5 @@
 4. Find the URL for the domain and service in the [Service Directory](https://directory.careaware.com/services-directory/)
 5. Find a valid patient and copy their patient id
 6. insert it via {service directory url}/service/patients/{patient id}/{service name}
+
+TOC
