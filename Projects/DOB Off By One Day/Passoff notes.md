@@ -31,11 +31,6 @@ When retrieving the DOB – include the time zone and translate the date to it�
 
 But when displaying it shouldn’t apply the any additional time zone logic (local timezone)
 
-  
-
-  
-
-  
 
  [https://github.cerner.com/Powerchart-Info-Exchange-Dev/mill-interop-adapter-ped/blob/c411b23a1cedaef6c17c99601c6a3f5b2887af94/src/main/java/com/cerner/interop/adapter/ped/internal/util/PatientRetriever.java#L180](https://github.cerner.com/Powerchart-Info-Exchange-Dev/mill-interop-adapter-ped/blob/c411b23a1cedaef6c17c99601c6a3f5b2887af94/src/main/java/com/cerner/interop/adapter/ped/internal/util/PatientRetriever.java#L180 "https://github.cerner.com/powerchart-info-exchange-dev/mill-interop-adapter-ped/blob/c411b23a1cedaef6c17c99601c6a3f5b2887af94/src/main/java/com/cerner/interop/adapter/ped/internal/util/patientretriever.java#l180")
 

@@ -18,5 +18,5 @@ From here we can go two different ways, set up our own tab or take over another 
 
 
 
-[^1]: [[User accounts#junituser_admin]]
+[^1]: [[Some accounts#junituser_admin]]
 [^2]: [[Cerner Jargon]]
