@@ -18,9 +18,9 @@ sequenceDiagram
 
 ```mermaid
 classDiagram
-	Animal<|--Duck
-	Animal<|--Fish
-	Animal<|--Zebra
+	Animal--|>Duck
+	Animal--|>Fish
+	Animal--|>Zebra
 	Animal : +int age
 	Animal : +String gender
 	Animal : +isMammal()

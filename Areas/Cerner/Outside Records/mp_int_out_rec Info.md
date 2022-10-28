@@ -2,7 +2,7 @@
 `powerchart/messagecenter/messagecenter_app/src/main/ccl/mp_int_out_rec/mp_int_out_rec_driver.prg`
 
 #### How to open and run our driver script
-In Windows 10 Developer (W10Dev) open DiscernVisualDeveloper (DVD), sign into an admin-ish account like junituser_admin([[User accounts#junituser_admin]])
+In Windows 10 Developer (W10Dev) open DiscernVisualDeveloper (DVD), sign into an admin-ish account like junituser_admin([[Some accounts#junituser_admin]])
 
 Open the File Explorer in W10Dev and go to the H: drive, then go to whereever ml-native lives on the mac and go to the location of the driver script.
 
