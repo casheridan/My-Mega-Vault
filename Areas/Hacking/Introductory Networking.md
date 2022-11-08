@@ -162,3 +162,26 @@ Syntax: `traceroute [destination]`
 Whois allows you to query who a domain name is registered to. Everywhere except Europe redacts personal information and can get a great deal of research off of a whois search.
 
 Syntax: `whois [domain]`
+
+## Dig
+---
+
+#### <u>What to take away</u>
+- IPs are pointed to by a Domain Name
+- Domain Names are stored in caches and servers
+- To find the associated domain of the IP, the computer will check the local cache first
+- The computer will then check the recursive DNS server
+	- If the IP isn't in the recursive server's cache it will pass the request to a root name server
+- Root name servers keep track of the of the DNS servers on the next level down
+- These lower level servers are called Top-Level Domain (TLD) servers
+	- Top-Level Domain servers are split up into extensions like `.com` or `.co.uk`
+	- If your request contains a `.com` then it will be transfered to a TLD that handles `.com` domains
+	- TLD servers keep track of the next level down, Authoratative name servers
+- When a TLD server gets the request for info the server passes it down to the appropriate Authoratative name server
+- Authoratative nam eservers are used to store DNS records for domains directly
+	- This means every domain in the world lives on an Authoratative name server somewhere
+	- When the information reaches the Authoratative name server it will send the relevant info back to you, allowing the computer to connect to the IP behind the requested domain
+- Web browsers do this automatically but we can do it manually with `dig`
+- Dig allows us to manually query recursive DNS servers of our choice for info about domains
+
+Syntax: `dig [domain] @[dns-server-ip]`
