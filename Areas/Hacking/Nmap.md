@@ -13,3 +13,12 @@ Every computer has 65535 ports but many of them are registered as standard ports
 In a CTF setting these standard ports can be altered so it's more important to perform appropriate enumeration on the target.
 
 To find out which ports the target has open we must do a port scan, this is to ensure we can perform a successful attack. To check how a port may respond, we can do it manually or with a tool like nmap. The port will respond in 3 ways: open, closed, or filtered (usually by a firewall). Once we know which ports are open, we can enumerate which services are running on each port manually or with nmap.
+
+## Nmap Use Cases
+---
+- Syn Scan: -sS
+- Detect target OS: -O
+- Detect verion of services: -sV
+- Verbosity: -v
+- More verbosity (use this at least): -vv
+- Save output in the 3 major formats: 
