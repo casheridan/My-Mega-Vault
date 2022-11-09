@@ -16,9 +16,22 @@ To find out which ports the target has open we must do a port scan, this is to e
 
 ## Nmap Use Cases
 ---
-- Syn Scan: -sS
-- Detect target OS: -O
-- Detect verion of services: -sV
-- Verbosity: -v
-- More verbosity (use this at least): -vv
-- Save output in the 3 major formats: 
+| Case                                                                          | Switch          |
+| ----------------------------------------------------------------------------- | --------------- |
+| Syn Scan                                                                      | `-sS`           |
+| Detect target OS                                                              | `-O`            |
+| Detect targets versions of services                                           | `-sV`           |
+| Verbose output                                                                | `-v`            |
+| More verbosity (use this at least)                                            | `-vv`           |
+| Save output, 3 major formats                                                  | `-oA`           |
+| Save output, normal format                                                    | `-oN`           |
+| Save output, greppable (very useful)                                          | `-oG`           |
+| "Aggressive" or "Loud" mode (service, OS, traceroute, common script scanning) | `-A`            |
+| Increase timing or speed to max (faster = louder)                             | `-T5`           |
+| Scan port 80                                                                  | `-p 80`         |
+| Scan ports 1000 - 1500                                                        | `-p 1000-1500`  |
+| Scan *all* ports                                                              | `-p-`           |
+| Activate Script from nmap scripting library                                   | `--script`      |
+| Activate all scripts from "vuln" category                                     | `--script=vuln` |
+
+## 
