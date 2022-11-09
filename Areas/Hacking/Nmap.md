@@ -33,5 +33,3 @@ To find out which ports the target has open we must do a port scan, this is to e
 | Scan *all* ports                                                              | `-p-`           |
 | Activate Script from nmap scripting library                                   | `--script`      |
 | Activate all scripts from "vuln" category                                     | `--script=vuln` |
-
-## 
