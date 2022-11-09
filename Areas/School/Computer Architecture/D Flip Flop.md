@@ -10,6 +10,7 @@ A D Flip Flop is used as a memory unit as the output remains constant unless del
 | 1   | 0   | 0   | 1   |
 | 1   | 1   | 1   | 0    |
 
+
 ## Circut Diagram
 ---
 ```circuitjs
@@ -37,9 +38,11 @@ w 16 288 16 336 0
 w 16 336 160 336 0
 M 384 144 464 144 2 2.5
 M 384 304 464 304 2 2.5
-L 192 112 -32 112 2 0 false 5 0
+L 160 112 -32 112 2 0 false 5 0
 
 ```
 
+
 ## Timing Diagram
 ---
+![[D Flip Flop.excalidraw]]

@@ -579,7 +579,7 @@ Q' ^UbcvrrsA
 			"x": -44.16668701171875,
 			"y": 364.1511001586914,
 			"width": 762.6666870117188,
-			"height": 0,
+			"height": 52.44389995993498,
 			"angle": 0,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
@@ -591,11 +591,11 @@ Q' ^UbcvrrsA
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"seed": 567392458,
-			"version": 128,
-			"versionNonce": 192750230,
+			"version": 384,
+			"versionNonce": 820815702,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1668019862458,
+			"updated": 1668019910495,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -604,7 +604,19 @@ Q' ^UbcvrrsA
 					0
 				],
 				[
-					381.3333435058594,
+					286.6035451638917,
+					0
+				],
+				[
+					286.6035451638917,
+					-52.44389995993498
+				],
+				[
+					532.9757320784327,
+					-52.44389995993498
+				],
+				[
+					533.6043093254405,
 					0
 				],
 				[
@@ -781,6 +793,47 @@ Q' ^UbcvrrsA
 					0
 				]
 			]
+		},
+		{
+			"id": "24Uf7QggynSPX6OJc5g0n",
+			"type": "arrow",
+			"x": 18.062170458644374,
+			"y": -72.30660185551216,
+			"width": 1.8855015772564911,
+			"height": 81.07656782203131,
+			"angle": 0,
+			"strokeColor": "#000000",
+			"backgroundColor": "transparent",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "dotted",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"strokeSharpness": "sharp",
+			"seed": 1655697354,
+			"version": 71,
+			"versionNonce": 820651018,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1668019935550,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.8855015772564911,
+					-81.07656782203131
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		}
 	],
 	"appState": {
