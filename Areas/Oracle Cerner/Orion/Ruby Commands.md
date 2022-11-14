@@ -1,5 +1,5 @@
 ```
-bundle [install (first time)/update (already )]
+bundle [install (first time)/update (already ran)]
 npm install
 rspec
 bundle exec rake assets:precompile
