@@ -15,5 +15,10 @@ There are two categories of counters:
 <u>Asynchronous Counter</u>
 We don't use universal clock, only first flip flop is driven by the main clock, and the clock input for the rest of flip flop io driven by the output of the previous Flip Flop.
 
+> Figure 1.
+
 <u>Synchronous Counter</u>
 This has one global clock which derives each Flip Flop so the output changes in parallel.
+
+> Figure 2.
+
