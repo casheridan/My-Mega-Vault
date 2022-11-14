@@ -6,6 +6,14 @@ We usually pair these with clocks, designated with CLK, as the first input and e
 
 >The basic Flip Flop starts with the D FF. SR & JK FFs can be mostly built with a D FF
 
+#### <u>Terms</u>
+- Rising Edge: When the electrical signal goes from LOW -> HIGH
+- Falling Edge: When electrical signal goes from HIGH -> LOW
+
+- Rising Sensitive: CLK value is 1 when Rising Edge occurs
+- Falling Sensitive: CLK value is 1 when Falling Edge occurs
+- Level Sensitive: CLK value is 1 during the duration of the HIGH
+
 ## D/SR/JK Flip Flops
 ---
 1. [[D Flip Flop]]

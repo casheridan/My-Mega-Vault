@@ -22,5 +22,5 @@ Level Sensitive: CLK value is 1 during the duration of the HIGH
 
 ## Timing Diagram
 ---
-Level Sensitivele:
+Level Sensitive:
 ![[SR Flip Flop.excalidraw]]
