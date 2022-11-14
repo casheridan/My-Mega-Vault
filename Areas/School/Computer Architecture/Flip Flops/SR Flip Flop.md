@@ -20,5 +20,7 @@ Rising Sensitive: CLK value is 1 when Rising Edge occurs
 Falling Sensitive: CLK value is 1 when Falling Edge occurs
 Level Sensitive: CLK value is 1 during the duration of the HIGH
 
-Timing Diagram Level Sensitive example:
+## Timing Diagram
+---
+Level Sensitivele:
 ![[SR Flip Flop.excalidraw]]
