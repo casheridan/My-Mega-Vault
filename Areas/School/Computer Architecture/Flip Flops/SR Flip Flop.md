@@ -13,12 +13,32 @@ R = Reset
 S + R = 1: Jammed, set to 0
 CLK: Clock
 
-Rising Edge: When the electrical signal goes from LOW -> HIGH
-Falling Edge: When electrical signal goes from HIGH -> LOW
-
-Rising Sensitive: CLK value is 1 when Rising Edge occurs
-Falling Sensitive: CLK value is 1 when Falling Edge occurs
-Level Sensitive: CLK value is 1 during the duration of the HIGH
+## Circut Diagram
+---
+```circuitjs
+$ 1 0.000005 3.1763992386181834 54 5 43 5e-11
+w 208 320 320 320 0
+w 208 128 320 128 0
+w 320 160 304 160 0
+w 400 272 304 160 0
+w 400 304 400 272 0
+w 400 144 400 176 0
+w 320 288 304 288 0
+w 400 176 304 288 0
+R 112 224 64 224 1 2 100 2.5 2.5 0 0.5
+w 112 224 112 144 0
+w 112 144 160 144 0
+w 112 224 112 304 0
+w 112 304 160 304 0
+M 384 144 464 144 2 2.5
+M 384 304 464 304 2 2.5
+L 160 112 64 112 2 0 false 5 0
+153 320 144 384 144 0 2 5 5
+153 320 304 384 304 0 2 5 5
+150 160 128 208 128 0 2 0 5
+150 160 320 208 320 0 2 0 5
+L 160 336 64 336 2 1 false 5 0
+```
 
 ## Timing Diagram
 ---
