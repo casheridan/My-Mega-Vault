@@ -2,8 +2,8 @@
 ---
 The purpose of a JK Flip Flop is to flip the response of an SR Flip Flop, acting essentially as a memory toggle.
 
-## 
-
+## Circuit Diagram
+---
 ```circuitjs
 $ 1 0.000005 1.3241202019156522 49 5 50 5e-11
 151 160 128 192 128 0 2 5 5
@@ -42,3 +42,7 @@ w 112 240 128 240 0
 w 112 256 128 256 0
 
 ```
+
+## Tinkercad Example
+---
+![[Screenshot 2022-11-14 214715.png]]
