@@ -12,17 +12,15 @@ There are two categories of counters:
 1. Asynchronous Counter
 2. Synchronous Counter
 
-<u>Asynchronous Counter</u>
+### Asynchronous Counter
 We don't use universal clock, only first flip flop is driven by the main clock, and the clock input for the rest of flip flop io driven by the output of the previous Flip Flop.
 
 **Tinkercad Example**
 
-<u>Synchronous Counter</u>
+### Synchronous Counter
 This has one global clock which derives each Flip Flop so the output changes in parallel.
 
-**Tinkercad Example**
-
-![[Screenshot 2022-11-15 014408.png]]
+<u>Circuit Diagram</u>
 ``` circuitjs
 $ 64 0.000005 10.20027730826997 50 5 50 5e-11
 L -48 208 -48 176 2 1 false 5 0
@@ -86,3 +84,6 @@ w 272 240 272 336 0
 w 128 240 128 336 0
 
 ```
+
+<u>Tinkercad Example</u>
+![[Screenshot 2022-11-15 014408.png]]
