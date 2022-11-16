@@ -63,6 +63,12 @@ This has one global clock which derives each Flip Flop so the output changes in 
 | 1   | 0   | 1   | 0   |
 | 1   | 1   | Qn' | Qn  |
 
+<u>Next State Diagram</u>
+| Present State | Next State | Outputs |
+| ------------- | ---------- | ------- |
+| Q             |            |         |
+
+<u>K-map</u>
 
 
 <u>Circuit Diagram (4 bit counter)</u>
@@ -132,3 +138,7 @@ w 128 240 128 336 0
 
 <u>Tinkercad Example</u>
 ![[Screenshot 2022-11-15 014408.png]]
+
+``` circuitjs
+
+```
