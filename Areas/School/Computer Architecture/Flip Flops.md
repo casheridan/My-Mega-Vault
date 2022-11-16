@@ -4,7 +4,7 @@ Flip Flops are essentially ways to store data, the output (which we define as Q)
 
 We usually pair these with clocks, designated with CLK, as the first input and either 1 (D FF) or 2 (SR & JK FF) other inputs.
 
->The basic Flip Flop starts with the D FF. SR & JK FFs can be mostly built with a D FF
+> Flip Flops can be built from latches most commonly the SR Latch
 
 #### <u>Terms</u>
 - Rising Edge: When the electrical signal goes from LOW -> HIGH
@@ -19,3 +19,4 @@ We usually pair these with clocks, designated with CLK, as the first input and e
 1. [[D Flip Flop]]
 2. [[SR Flip Flop]]
 3. [[JK Flip Flop]]
+4. [[T Flip Flop]]
