@@ -47,7 +47,25 @@ w 80 224 80 288 0
 ### Synchronous Counter
 This has one global clock which derives each Flip Flop so the output changes in parallel.
 
-<u>Circuit Diagram</u>
+<u>Excitation Table</u>
+
+| Qn  | Qn+1 | J   | K   |
+| --- | ---- | --- | --- |
+| 0   | 0    | 0   | x   |
+| 0   | 1    | 1   | x   |
+| 1   | 0    | x   | 1   |
+| 1   | 1    | x   | 0   |
+
+| J   | K   | Q   | Q'  |
+| --- | --- | --- | --- |
+| 0   | 0   | Q   | Q'  |
+| 0   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | Qn' | Qn  |
+
+
+
+<u>Circuit Diagram (4 bit counter)</u>
 ``` circuitjs
 $ 64 0.000005 10.20027730826997 50 5 50 5e-11
 L -48 208 -48 176 2 1 false 5 0
