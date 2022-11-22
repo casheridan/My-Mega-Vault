@@ -2,7 +2,7 @@
 ---
 Flip Flops are essentially ways to store data, the output (which we define as Q) will stay the same unless determined by the data.
 
-We usually pair these with clocks, designated with CLK, as the first input and either 1 (D FF) or 2 (SR & JK FF) other inputs.
+We usually pair these with clocks, designated with CLK, as the first input and either 1 (D & T FF) or 2 (SR & JK FF) other inputs.
 
 > Flip Flops can be built from latches most commonly the SR Latch
 
@@ -14,7 +14,7 @@ We usually pair these with clocks, designated with CLK, as the first input and e
 - Falling Sensitive: CLK value is 1 when Falling Edge occurs
 - Level Sensitive: CLK value is 1 during the duration of the HIGH
 
-## D/SR/JK Flip Flops
+## T/SR/D/JK Flip Flops
 ---
 1. [[D Flip Flop]]
 2. [[SR Flip Flop]]
