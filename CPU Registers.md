@@ -7,3 +7,12 @@ The register can perform the following operations:
 2. DECODE: Decodes instruction to be performed.
 3. EXECUTE: Executes operation on CPU
 
+<u>Types of Memory Registers</u>
+- Accumulator (AC)
+- Flag Register
+- Address Register (AR)
+- Data Register (DR)
+- Programm Counter (PC)
+- Instruction Register (IR)
+
+**ARM**: Advanced RISC Machine.
