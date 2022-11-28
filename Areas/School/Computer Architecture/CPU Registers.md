@@ -16,7 +16,7 @@ The register can perform the following operations:
 - Instruction Register (IR)
 
 ---
-
+<u>What is ARM, RISC, CISC?</u>
 **ARM**: Advanced RISC Machine.
 **RISC**: Reduced Instruction Set Computer.
 **CISC**: Complex Instuction Set Computer.
@@ -27,8 +27,7 @@ ARM processors are used in a lot of commercial applications.
 - Modem
 - Mobile Phones
 - Handy Cameras
-
----
+ARM will have a high performance, low code size, low power consumption, and low silicon area.
 
 RISC:
 1. Has a large uniform Registers.
@@ -36,9 +35,7 @@ RISC:
 3. Simple addressing mode.
 4. Fixed instruction length.
 
----
 
-ARM will have a high performance, low code size, low power consumption, and low silicon area.
 
 ARM Architectures:
 - 32-bit arch
@@ -86,6 +83,3 @@ Mode:
 	- Abort
 	- Supervised
 	- Undefined
-
----
-
