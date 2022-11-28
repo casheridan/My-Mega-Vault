@@ -23,10 +23,10 @@ The register can perform the following operations:
 
 ARM processors are used in a lot of commercial applications.
 (Old) Examples:
-- Video Games (This is outdated and possibly incorrect usage of the use here, other than Video game consoles )
+- Video Games (This is outdated and possibly incorrect usage of the use here, other than older video game consoles)
 - Modem
 - Mobile Phones
-- Handy Cameras.
+- Handy Cameras
 
 ---
 
@@ -56,8 +56,36 @@ Two Types of Instuction sets for the ARM processor:
 
 <u>ARM Registers</u>
 - 13 general pupose registers (R<sub>0</sub>, ..., R<sub>12</sub>)
-- 3 special purpose registers (R<sub<>13, R14, R15)
+- 3 special purpose registers (R<sub>13</sub>, R<sub>14</sub>, R<sub>15</sub>)
+R<sub>13</sub>: Stack Register (PUSH, POP)
+R<sub>14</sub>: Link Register
+R<sub>15</sub>: PC
 
-R13 = Stack Register (PUSH, POP)
-R14 = Link Register
-R15 = PC
+---
+
+CPSR: Current Program Status Register
+
+[[CSPR Figure.excalidraw]]
+N: Negative Flag
+Z: Zero Flag
+C: Carry Flag
+V: Overflow Flag
+
+IF: Interupt Flag
+T:
+- Thumb State
+- ARM State
+- Set 1 = T
+- Set 0 = T
+Mode: 
+- There are 7 types: 
+	- User
+	- System
+	- FIQ
+	- IRQ
+	- Abort
+	- Supervised
+	- Undefined
+
+---
+
