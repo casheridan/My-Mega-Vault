@@ -41,4 +41,13 @@ Cognative Approach: The way you approach and interpret a stressor has consequenc
 ![[chapter-5.png]]
 
 Conditioned Response: Learned response
-Unconditioned 
+Unconditioned Response: Natural response
+Reinforcement (+/-): Strenghthens behavior
+Punishment (+/-): Weakens behavior
+
+ ![[chapter-15.png]]
+
+GAD: Unknown cause of anxiety
+
+
+Antipsycotic Drug: Blocks dopamine receptors
