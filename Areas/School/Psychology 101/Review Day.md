@@ -34,5 +34,11 @@ Absolute Threshold: One stimuli detectible 50% of the time
 
 Cortozol: Stress hormone
 Pshychoneuroimmunology: Immune system effected when stressed
-Types of cells
-Personality Types: A (Stressed and Angry) B (Laid Back, ) C ()
+Types of cells: B cells (Produce anti-Bodies), T cells (Attack bad cells directly)
+Personality Types: A (Angry), B (Bro \[Chill and Relaxed\]), D (Depressive)
+Cognative Approach: The way you approach and interpret a stressor has consequences for our ability to cope with that stressor. (Threat vs Oppotunity/Challenge)
+
+![[chapter-5.png]]
+
+Conditioned Response: Learned response
+Unconditioned 
