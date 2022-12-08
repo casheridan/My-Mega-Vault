@@ -20,7 +20,19 @@ Elaborative Rehersal: Relates personal life experiences to new info
 Sympathetic: Automatic response (fight or flight)
 Parasympathetic: Brings body back to calm after stressful response
 Neurotransmitters: Dopamine (High levels = Schizophrenia), Seratonin, GABA, Nonepinephrine, epinephrine, 
-Lobes: Frontal (Movement, thinking), Parietal (Balance, Pain, Feeling), Occipital (Vision), Temporal (Hearing)
+Lobes: Frontal (Thinking, Personality, memory), Parietal (Touch, pain), Occipital (Vision), Temporal (Hearing), Cerebelum (Balance, movement), Brain stem (Breathing, Sleeping, Eating, Heart \[Basic Living Functions\])
 Spilt brain: corpus corlosum
 Behavioral genetics
 synaptic plasticity: how brain re-learn from damage.
+
+![[chapter-3.png]]
+
+Just noticable difference: Two stimuli detectible 50% of the time
+Absolute Threshold: One stimuli detectible 50% of the time
+
+![[chapter-12.png]]
+
+Cortozol: Stress hormone
+Pshychoneuroimmunology: Immune system effected when stressed
+Types of cells
+Personality Types: A (Stressed and Angry) B (Laid Back, ) C ()
