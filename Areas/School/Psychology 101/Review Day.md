@@ -48,6 +48,6 @@ Punishment (+/-): Weakens behavior
  ![[chapter-15.png]]
 
 GAD: Unknown cause of anxiety
-
-
 Antipsycotic Drug: Blocks dopamine receptors
+
+![[chapter-9.png]]
