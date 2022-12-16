@@ -24,6 +24,7 @@ This will open the app in your default web browser. The development server will 
 
 You can now start building your React app by modifying the files in the `src` directory. The entry point for the app is `src/index.js`, and you can add new components in the `src/components` directory.
 
+
 ## Adding Firebase to the Project
 "How do I add Google Firebase to my Create React App project?"
 
@@ -70,6 +71,59 @@ You can then use the `database` object to read and write data to the Firebase Re
 const database = firebase.database();
 database.ref('/some/path').set({ data: 'hello world' });
 ```
+
+
+## Multiple Pages
+"How do I add multiple pages to the project?"
+
+To add multiple pages to your React project, you can use the `react-router-dom` library, which provides a declarative way to define routes and manage the navigation between different pages in your app.
+
+To install the `react-router-dom` library, open a terminal and navigate to your project directory. Then run the following command:
+
+```Terminal
+npm install react-router-dom
+```
+
+This will install the `react-router-dom` package and add it as a dependency to your project.
+
+To use the `react-router-dom` library, you need to wrap your app in a `Router` component and define the different routes for your app using `Route` components.
+
+Here's an example of how you can set up routing in your React app:
+
+```javascript
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
+    </Router>
+  );
+}
+```
+
+In this example, the `HomePage`, `AboutPage`, and `ContactPage` components are rendered for the corresponding routes. The `exact` prop on the `/` route ensures that the `HomePage` component is only rendered for the exact `/` route and not for any other route that starts with `/`.
+
+You can then use `Link` components from the `react-router-dom` library to navigate between the different pages in your app.
+
+```javascript
+import { Link } from 'react-router-dom';
+
+function Navigation() {
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
+    </nav>
+  );
+}
+```
+
+This will render a navigation bar with links to the different pages in your app. When the user clicks on a link, the app will navigate to the corresponding route and render the corresponding page.
+
 
 ## The Base Component and Functionality
 "Can you make a ReactJS component that has multiple dropdown components that are fetched from a Google Firebase database. The dropdown components contain 6 text fields that show "Project Files", "Export File", and "Printer"?"
@@ -139,6 +193,7 @@ The `Dropdown` component has a state variable called `isOpen` that determines wh
 
 I hope this helps! Let me know if you have any questions.
 
+
 ## Refine Dropdown Component
 "For the 'Dropdown' component, can you make it map over a list of 3d print jobs from the database, and each job is a dropdown that slides open a drawer between the dropdowns and the drawer containing the list of options?"
 
@@ -172,6 +227,7 @@ function Dropdown(props) {
 This component maps over the `jobs` prop, which is an array of objects representing 3d print jobs. Each job has a `name` property that is used as the label for the dropdown button. When the button is clicked, the dropdown menu opens, revealing a list of options.
 
 I hope this helps! Let me know if you have any questions.
+
 
 ## Sliding Drawer
 "How can you make it look like the drawer slides open when you click on it?"
@@ -247,6 +303,8 @@ function Dropdown(props) {
 
 I hope this helps! Let me know if you have any questions.
 
+
+
 ## Dropdown Box Overflow Scroll
 "Can we make the div that houses all the dropdowns hide the overflow and allow us to scroll through the entries?"
 
@@ -286,6 +344,7 @@ function MyComponent() {
 The `dropdown-container` div has the `overflow` property set to `auto`, which allows you to scroll through the entries if there are more dropdowns than can fit within the container. The `maxHeight` property sets the maximum height of the container, so it won't grow larger than that.
 
 I hope this helps! Let me know if you have any questions.
+
 
 
 ## 
