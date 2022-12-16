@@ -127,70 +127,68 @@ This will render a navigation bar with links to the different pages in your app.
 
 
 ## The Base Component and Functionality
-"Can you make a ReactJS component that has multiple dropdown components that are fetched from a Google Firebase database. The dropdown components contain 6 text fields that show "Project Files", "Export File", and "Printer"?"
+"Can you make a component that contains and maps over 3d print jobs fetched from a Google Firebase database? Each 3d print job has a display name before being clicked on and once clicked it drops down and expands a hidden drawer to show: "Project Files", "Export File", and "Printer". Next to each of these fields is a value pulled from the database."
 
-Sure! Here's an example of how you could create a ReactJS component with multiple dropdown components that are fetched from a Google Firebase database:
+Sure, here's an example of a React component that fetches 3D print jobs from a Firebase database and renders them in a list with expandable drawers:
+
 ```javascript
 import React, { useState, useEffect } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/database';
+import { useFirebase } from '../firebase';
 
-function MyComponent() {
-  const [dropdownData, setDropdownData] = useState([]);
+function PrintJobsList() {
+  const [printJobs, setPrintJobs] = useState([]);
+  const [expanded, setExpanded] = useState(null);
+
+  const firebase = useFirebase();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const db = firebase.database();
-      const snapshot = await db.ref('dropdown').once('value');
-      setDropdownData(snapshot.val());
-    };
-    fetchData();
-  }, []);
+    // Fetch print jobs from Firebase
+    const printJobsRef = firebase.database().ref('/print-jobs');
+    printJobsRef.on('value', snapshot => {
+      const printJobsData = snapshot.val();
+      setPrintJobs(
+        Object.entries(printJobsData).map(([id, values]) => ({
+          id,
+          ...values,
+        }))
+      );
+    });
+  }, [firebase]);
+
+  function handleExpand(id) {
+    setExpanded(expanded === id ? null : id);
+  }
 
   return (
-    <div>
-      {dropdownData.map((item, index) => (
-        <div key={index}>
-          <Dropdown
-            title={item.title}
-            options={[
-              'Project Files',
-              'Export File',
-              'Printer',
-            ]}
-          />
-        </div>
+    <ul>
+      {printJobs.map(printJob => (
+        <li key={printJob.id}>
+          <button onClick={() => handleExpand(printJob.id)}>
+            {printJob.displayName}
+          </button>
+          {expanded === printJob.id && (
+            <div className="expandable-drawer">
+              <div>
+                <strong>Project Files:</strong> {printJob.projectFiles}
+              </div>
+              <div>
+                <strong>Export File:</strong> {printJob.exportFile}
+              </div>
+              <div>
+                <strong>Printer:</strong> {printJob.printer}
+              </div>
+            </div>
+          )}
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
-
-function Dropdown(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      <button onClick={toggleDropdown}>{props.title}</button>
-      {isOpen && (
-        <ul>
-          {props.options.map((option, index) => (
-            <li key={index}>{option}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
-export default MyComponent;
 ```
 
-This component fetches the data for the dropdown components from the `dropdown` path in the Firebase database using the `once` method. The data is stored in the `dropdownData` state variable, which is an array of objects with a `title` property.
+This component uses the `useFirebase` hook to get a reference to the Firebase instance, and then fetches the 3D print jobs from the `/print-jobs` path in the database using the `on` method. The component stores the list of print jobs in the `printJobs` state variable, and the `expanded` state variable tracks which print job's drawer is currently expanded.
 
-The component then uses the `map` function to render a `Dropdown` component for each item in the `dropdownData` array, passing the `title` and an array of options as props to the `Dropdown` component.
-
-The `Dropdown` component has a state variable called `isOpen` that determines whether the dropdown menu is open or closed. The component renders a button with the `title` prop as the label, and a list of options when the dropdown is open. Clicking the button toggles the value of the `isOpen` state variable, causing the dropdown menu to open or close.
+The component renders the list of print jobs as a list of buttons, each with a click handler that toggles the expansion of the corresponding drawer. The drawer is rendered using a `div` element with the `expandable-drawer` class, and it displays the values for the `projectFiles`, `exportFile`, and `printer` fields for each print job.
 
 I hope this helps! Let me know if you have any questions.
 
