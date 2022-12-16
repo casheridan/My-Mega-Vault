@@ -264,47 +264,88 @@ I hope this helps! Let me know if you have any questions.
 ## Sliding Drawer
 "Can you make it look like the drawer slides open when you click on it?"
 
+Sure, here's an updated version of the component that animates the expansion and contraction of the drawer using CSS transitions:
 
-
-## Dropdown Box Overflow Scroll
-"Can we make the div that houses all the dropdowns hide the overflow and allow us to scroll through the entries?"
-
-Sure! Here's an example of how you can make the div that houses all the dropdowns hide the overflow and allow you to scroll through the entries:
 ```javascript
-function MyComponent() {
-  const [dropdownData, setDropdownData] = useState([]);
+import React, { useState, useEffect } from 'react';
+import { useFirebase } from '../firebase';
+import './PrintJobsList.css';
+
+function PrintJobsList() {
+  const [printJobs, setPrintJobs] = useState([]);
+  const [expanded, setExpanded] = useState(null);
+
+  const firebase = useFirebase();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const db = firebase.database();
-      const snapshot = await db.ref('dropdown').once('value');
-      setDropdownData(snapshot.val());
-    };
-    fetchData();
-  }, []);
+    // Fetch print jobs from Firebase
+    const printJobsRef = firebase.database().ref('/print-jobs');
+    printJobsRef.on('value', snapshot => {
+      const printJobsData = snapshot.val();
+      setPrintJobs(
+        Object.entries(printJobsData).map(([id, values]) => ({
+          id,
+          ...values,
+        }))
+      );
+    });
+  }, [firebase]);
+
+  function handleExpand(id) {
+    setExpanded(expanded === id ? null : id);
+  }
 
   return (
-    <div className="dropdown-container" style={{ overflow: 'auto', maxHeight: '200px' }}>
-      {dropdownData.map((item, index) => (
-        <div key={index}>
-          <Dropdown
-            title={item.title}
-            options={[
-              'Project Files',
-              'Export File',
-              'Printer',
-            ]}
-          />
-        </div>
+    <ul>
+      {printJobs.map(printJob => (
+        <li key={printJob.id}>
+          <button onClick={() => handleExpand(printJob.id)}>
+            {printJob.displayName}
+          </button>
+          {expanded === printJob.id && (
+            <div className="expandable-drawer">
+              <div>
+                <strong>Print Location URL:</strong>{' '}
+                <a href={printJob.printLocationURL}>{printJob.printLocationURL}</a>
+              </div>
+              <div>
+                <strong>Project Files:</strong> {printJob.projectFiles}
+              </div>
+              <div>
+                <strong>Export File:</strong> {printJob.exportFile}
+              </div>
+              <div>
+                <strong>Printer:</strong> {printJob.printer}
+              </div>
+            </div>
+          )}
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 ```
 
-The `dropdown-container` div has the `overflow` property set to `auto`, which allows you to scroll through the entries if there are more dropdowns than can fit within the container. The `maxHeight` property sets the maximum height of the container, so it won't grow larger than that.
+This component works in the same way as the previous version, but it includes a `PrintJobsList.css` file with the following styles:
 
-I hope this helps! Let me know if you have any questions.
+```css
+.expandable-drawer {
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+}
+
+.expandable-drawer.expanded {
+  max-height: 500px;
+}
+```
+
+The `expandable-drawer` class sets the `overflow` property to `hidden` to hide the content that overflows the drawer, and the `transition` property specifies a smooth animation when the `max-height` property changes. The `max-height` is set to `0` by default to collapse the drawer, and the `expanded` class sets the `max-height` to a larger value to expand the drawer.
+
+To toggle the expansion and contraction of the drawer, the component uses the `expanded` class in combination with the `expanded` state variable. When the `expanded` state variable
+
+## Dropdown Box Overflow Scroll
+"Can we make the list 3D Print Job dropdowns hide the overflow and allow us to scroll through the jobs?"
 
 
 
