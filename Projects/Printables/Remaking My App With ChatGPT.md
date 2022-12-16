@@ -125,6 +125,7 @@ function Navigation() {
 This will render a navigation bar with links to the different pages in your app. When the user clicks on a link, the app will navigate to the corresponding route and render the corresponding page.
 
 
+
 ## The Base Component and Functionality
 "Can you make a ReactJS component that has multiple dropdown components that are fetched from a Google Firebase database. The dropdown components contain 6 text fields that show "Project Files", "Export File", and "Printer"?"
 
@@ -348,3 +349,5 @@ I hope this helps! Let me know if you have any questions.
 
 
 ## 
+
+Can you make a component that contains multiple dropdown components with different displayed names that are fetched from a Google Firebase database? Each dropdown component contains: "Project Files", "Export File", and "Printer" and next to each of these is a value we grab from the database for that single dropdown.
