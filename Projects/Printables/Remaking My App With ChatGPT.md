@@ -404,23 +404,33 @@ function PrintJobsList() {
   return (
     <div className="scrollable-list">
       <ul>
-        {printJobs.map(printJob => (
-          <li key={printJob.id}>
-            <button onClick={() => handleExpand(printJob.id)}>
-              {printJob.displayName}
-            </button>
-            {expanded === printJob.id && (
-              <div className="expandable-drawer">
-                <div>
-                  <strong>Print Location URL:</strong>{' '}
-                  <a href={printJob.printLocationURL}>{printJob.printLocationURL}</a>
-                </div>
-                <div>
-                  <strong>Project Files:</strong> {printJob.projectFiles}
-                </div>
-                <div>
-                  <
-
+      {printJobs.map(printJob => (
+        <li key={printJob.id}>
+          <button onClick={() => handleExpand(printJob.id)}>
+            {printJob.displayName}
+          </button>
+          {expanded === printJob.id && (
+            <div className="expandable-drawer">
+              <div>
+                <strong>Print Location URL:</strong>{' '}
+                <a href={printJob.printLocationURL}>{printJob.printLocationURL}</a>
+              </div>
+              <div>
+                <strong>Project Files:</strong> {printJob.projectFiles}
+              </div>
+              <div>
+                <strong>Export File:</strong> {printJob.exportFile}
+              </div>
+              <div>
+                <strong>Printer:</strong> {printJob.printer}
+              </div>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
 ```
 
 ## 
