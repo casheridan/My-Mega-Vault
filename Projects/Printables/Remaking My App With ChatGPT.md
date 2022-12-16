@@ -1,10 +1,10 @@
 Structure: "Prompt" -> Response
 
-## The base component and functionality
+## The Base Component and Functionality
 "Can you make a ReactJS component that has multiple dropdown components that are fetched from a Google Firebase database. The dropdown components contain 6 text fields that show "Project Files", "Export File", and "Printer"?"
 
 Sure! Here's an example of how you could create a ReactJS component with multiple dropdown components that are fetched from a Google Firebase database:
-```
+```javascript
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/database';
@@ -72,7 +72,7 @@ I hope this helps! Let me know if you have any questions.
 "For the 'Dropdown' component, can you make it map over a list of 3d print jobs from the database, and each job is a dropdown that slides open a drawer between the dropdowns and the drawer containing the list of options?"
 
 Sure! Here's an example of how you could modify the `Dropdown` component to map over a list of 3d print jobs from the database and render a dropdown for each job:
-```
+```javascript
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -102,3 +102,119 @@ This component maps over the `jobs` prop, which is an array of objects represent
 
 I hope this helps! Let me know if you have any questions.
 
+## Sliding Drawer
+"How can you make it look like the drawer slides open when you click on it?"
+
+To make the drawer look like it's sliding open when you click on it, you can use a CSS transition. Here's an example of how you could modify the `Dropdown` component to add a slide transition:
+```javascript
+function Dropdown(props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      {props.jobs.map((job, index) => (
+        <div key={index}>
+          <button onClick={toggleDropdown}>{job.name}</button>
+          {isOpen && (
+            <div className="drawer">
+              <ul>
+                {props.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+Then, you can add the following CSS to your stylesheet to apply the transition:
+```css
+.drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.drawer.open {
+  max-height: 200px;
+}
+```
+
+The `drawer` class sets the `max-height` to 0 and hides any overflow, so the drawer is initially closed. The `open` class sets the `max-height` to a value greater than 0, which causes the drawer to slide open. The `transition` property specifies the duration and easing of the transition.
+
+You can then toggle the `open` class on the `drawer` element when the dropdown is opened or closed:
+```javascript
+function Dropdown(props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      {props.jobs.map((job, index) => (
+        <div key={index}>
+          <button onClick={toggleDropdown}>{job.name}</button>
+          {isOpen && (
+            <div className={isOpen ? 'drawer open' : 'drawer'}>
+              <ul>
+                {props.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+I hope this helps! Let me know if you have any questions.
+
+## Dropdown Box Overflow Scroll
+"Can we make the div that houses all the dropdowns hide the overflow and allow us to scroll through the entries?"
+
+Sure! Here's an example of how you can make the div that houses all the dropdowns hide the overflow and allow you to scroll through the entries:
+```javascript
+function MyComponent() {
+  const [dropdownData, setDropdownData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const db = firebase.database();
+      const snapshot = await db.ref('dropdown').once('value');
+      setDropdownData(snapshot.val());
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div className="dropdown-container" style={{ overflow: 'auto', maxHeight: '200px' }}>
+      {dropdownData.map((item, index) => (
+        <div key={index}>
+          <Dropdown
+            title={item.title}
+            options={[
+              'Project Files',
+              'Export File',
+              'Printer',
+            ]}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+The `dropdown-container` div has the `overflow` property set to `auto`, which allows you to scroll through the entries if there are more dropdowns than can fit within the container. The `maxHeight` property sets the maximum height of the container, so it won't grow larger than that.
+
+I hope this helps! Let me know if you have any questions.
+
+
+## 
