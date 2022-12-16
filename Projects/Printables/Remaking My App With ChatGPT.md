@@ -350,4 +350,4 @@ I hope this helps! Let me know if you have any questions.
 
 ## 
 
-Can you make a component that contains multiple dropdown components with different displayed names that are fetched from a Google Firebase database? Each dropdown component contains: "Project Files", "Export File", and "Printer" and next to each of these is a value we grab from the database for that single dropdown.
+Can you make a component that contains and maps over 3d print jobs fetched from a Google Firebase database? Each 3d print job has a display name before being clicked on and once clicked it drops down and expands a hidden drawer to show: "Project Files", "Export File", and "Printer". Next to each of these fields is a value pulled from the database.
