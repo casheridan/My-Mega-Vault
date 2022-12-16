@@ -345,7 +345,7 @@ The `expandable-drawer` class sets the `overflow` property to `hidden` to hide t
 To toggle the expansion and contraction of the drawer, the component uses the `expanded` class in combination with the `expanded` state variable. When the `expanded` state variable
 
 ## Dropdown Box Overflow Scroll
-"Can we make the list 3D Print Job dropdowns hide the overflow and allow us to scroll through the jobs?"
+"Can you make the list 3D Print Jobs hide excess jobs that don't fit on screen and allow us to scroll through the jobs?"
 
 
 
