@@ -347,8 +347,80 @@ To toggle the expansion and contraction of the drawer, the component uses the `e
 ## Dropdown Box Overflow Scroll
 "Can you make the list 3D Print Jobs hide excess jobs that don't fit on screen and allow us to scroll through the jobs?"
 
+f you add the fixed height and overflow properties to the `./PrintJobsList.css` file, the `div` element that wraps the `<ul>` element will not be styled with those properties. The `./PrintJobsList.css` file styles the `.expandable-drawer` class, which is applied to a different `div` element within the `PrintJobsList` component.
 
+To style the `div` element that wraps the `<ul>` element with a fixed height and overflow properties, you can either add a new class to the `./PrintJobsList.css` file and apply that class to the `div` element, or you can apply the styles directly to the `div` element using inline styles as shown in the previous example.
+
+Here is an example of how you can add a new class to the `./PrintJobsList.css` file and apply it to the `div` element:
+
+```css
+.scrollable-list {
+  height: 300px;
+  overflow: scroll;
+}
+
+.expandable-drawer {
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+}
+
+.expandable-drawer.expanded {
+  max-height: 500px;
+}
+```
+
+Then, in the `PrintJobsList` component, you can apply the `scrollable-list` class to the `div` element like this:
+
+```javascript
+import React, { useState, useEffect } from 'react';
+import { useFirebase } from '../firebase';
+import './PrintJobsList.css';
+
+function PrintJobsList() {
+  const [printJobs, setPrintJobs] = useState([]);
+  const [expanded, setExpanded] = useState(null);
+
+  const firebase = useFirebase();
+
+  useEffect(() => {
+    // Fetch print jobs from Firebase
+    const printJobsRef = firebase.database().ref('/print-jobs');
+    printJobsRef.on('value', snapshot => {
+      const printJobsData = snapshot.val();
+      setPrintJobs(
+        Object.entries(printJobsData).map(([id, values]) => ({
+          id,
+          ...values,
+        }))
+      );
+    });
+  }, [firebase]);
+
+  function handleExpand(id) {
+    setExpanded(expanded === id ? null : id);
+  }
+
+  return (
+    <div className="scrollable-list">
+      <ul>
+        {printJobs.map(printJob => (
+          <li key={printJob.id}>
+            <button onClick={() => handleExpand(printJob.id)}>
+              {printJob.displayName}
+            </button>
+            {expanded === printJob.id && (
+              <div className="expandable-drawer">
+                <div>
+                  <strong>Print Location URL:</strong>{' '}
+                  <a href={printJob.printLocationURL}>{printJob.printLocationURL}</a>
+                </div>
+                <div>
+                  <strong>Project Files:</strong> {printJob.projectFiles}
+                </div>
+                <div>
+                  <
+
+```
 
 ## 
-
-Can you make a component that contains and maps over 3d print jobs fetched from a Google Firebase database? Each 3d print job has a display name before being clicked on and once clicked it drops down and expands a hidden drawer to show: "Project Files", "Export File", and "Printer". Next to each of these fields is a value pulled from the database.
