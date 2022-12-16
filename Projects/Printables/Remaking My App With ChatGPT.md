@@ -194,113 +194,75 @@ I hope this helps! Let me know if you have any questions.
 
 
 ## Refine Dropdown Component
-"For the 'Dropdown' component, can you make it map over a list of 3d print jobs from the database, and each job is a dropdown that slides open a drawer between the dropdowns and the drawer containing the list of options?"
+"Can you add another field to the drawer. It's displayed at the top, its name is "Print Location URL", and the value next to it is an external link to whatever is in the database."
 
-Sure! Here's an example of how you could modify the `Dropdown` component to map over a list of 3d print jobs from the database and render a dropdown for each job:
+Sure, here's an updated version of the component that includes a "Print Location URL" field at the top of the expandable drawer, and displays the value as an external link:
+
 ```javascript
-function Dropdown(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
+import React, { useState, useEffect } from 'react';
+import { useFirebase } from '../firebase';
+
+function PrintJobsList() {
+  const [printJobs, setPrintJobs] = useState([]);
+  const [expanded, setExpanded] = useState(null);
+
+  const firebase = useFirebase();
+
+  useEffect(() => {
+    // Fetch print jobs from Firebase
+    const printJobsRef = firebase.database().ref('/print-jobs');
+    printJobsRef.on('value', snapshot => {
+      const printJobsData = snapshot.val();
+      setPrintJobs(
+        Object.entries(printJobsData).map(([id, values]) => ({
+          id,
+          ...values,
+        }))
+      );
+    });
+  }, [firebase]);
+
+  function handleExpand(id) {
+    setExpanded(expanded === id ? null : id);
+  }
 
   return (
-    <div>
-      {props.jobs.map((job, index) => (
-        <div key={index}>
-          <button onClick={toggleDropdown}>{job.name}</button>
-          {isOpen && (
-            <div>
-              <ul>
-                {props.options.map((option, index) => (
-                  <li key={index}>{option}</li>
-                ))}
-              </ul>
+    <ul>
+      {printJobs.map(printJob => (
+        <li key={printJob.id}>
+          <button onClick={() => handleExpand(printJob.id)}>
+            {printJob.displayName}
+          </button>
+          {expanded === printJob.id && (
+            <div className="expandable-drawer">
+              <div>
+                <strong>Print Location URL:</strong>{' '}
+                <a href={printJob.printLocationURL}>{printJob.printLocationURL}</a>
+              </div>
+              <div>
+                <strong>Project Files:</strong> {printJob.projectFiles}
+              </div>
+              <div>
+                <strong>Export File:</strong> {printJob.exportFile}
+              </div>
+              <div>
+                <strong>Printer:</strong> {printJob.printer}
+              </div>
             </div>
           )}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 ```
 
-This component maps over the `jobs` prop, which is an array of objects representing 3d print jobs. Each job has a `name` property that is used as the label for the dropdown button. When the button is clicked, the dropdown menu opens, revealing a list of options.
+This component works in the same way as the previous version, but it includes an extra `div` element at the top of the expandable drawer to display the "Print Location URL" field. The value for this field is displayed as an external link using an `a` element.
 
 I hope this helps! Let me know if you have any questions.
-
 
 ## Sliding Drawer
-"How can you make it look like the drawer slides open when you click on it?"
-
-To make the drawer look like it's sliding open when you click on it, you can use a CSS transition. Here's an example of how you could modify the `Dropdown` component to add a slide transition:
-```javascript
-function Dropdown(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      {props.jobs.map((job, index) => (
-        <div key={index}>
-          <button onClick={toggleDropdown}>{job.name}</button>
-          {isOpen && (
-            <div className="drawer">
-              <ul>
-                {props.options.map((option, index) => (
-                  <li key={index}>{option}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-```
-
-Then, you can add the following CSS to your stylesheet to apply the transition:
-```css
-.drawer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.drawer.open {
-  max-height: 200px;
-}
-```
-
-The `drawer` class sets the `max-height` to 0 and hides any overflow, so the drawer is initially closed. The `open` class sets the `max-height` to a value greater than 0, which causes the drawer to slide open. The `transition` property specifies the duration and easing of the transition.
-
-You can then toggle the `open` class on the `drawer` element when the dropdown is opened or closed:
-```javascript
-function Dropdown(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      {props.jobs.map((job, index) => (
-        <div key={index}>
-          <button onClick={toggleDropdown}>{job.name}</button>
-          {isOpen && (
-            <div className={isOpen ? 'drawer open' : 'drawer'}>
-              <ul>
-                {props.options.map((option, index) => (
-                  <li key={index}>{option}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-```
-
-I hope this helps! Let me know if you have any questions.
+"Can you make it look like the drawer slides open when you click on it?"
 
 
 
