@@ -34,7 +34,7 @@ Absolute Threshold: One stimuli detectible 50% of the time
 
 Cortozol: Stress hormone
 Pshychoneuroimmunology: Immune system effected when stressed
-Types of cells: B cells (Produce anti-Bodies), T cells (Attack bad cells directly)
+Types of cells: B cells (Produce anti-Bodies), T cells (Attack bad cells directly), NK cells (produces chemicals to kill bad cells)
 Personality Types: A (Angry), B (Bro \[Chill and Relaxed\]), D (Depressive)
 Cognative Approach: The way you approach and interpret a stressor has consequences for our ability to cope with that stressor. (Threat vs Oppotunity/Challenge)
 
